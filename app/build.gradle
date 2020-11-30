@@ -1,23 +1,25 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 buildscript {
     repositories {
         maven { url 'https://plugins.gradle.org/m2/'}
     }
     dependencies {
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.11.2'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.9, 0.99.99]'
     }
 }
-apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
 
 repositories {
     maven { url 'https://maven.google.com' }
 }
 
-apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.simcoder.whatsappclone"
+        applicationId "MercyChat"
         minSdkVersion 18
         targetSdkVersion 27
         versionCode 1
@@ -61,4 +63,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-apply plugin: 'com.google.gms.google-services'
